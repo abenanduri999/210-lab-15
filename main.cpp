@@ -49,11 +49,16 @@ int main() {
     string w1;  
 
     
-    int count; 
+    
     if(inputFile.is_open()) 
     {
-        while (inputFile>>count) 
+        while (inputFile>>t1) 
         {
+            inputFile.ignore();
+            inputFile>>y1;
+            inputFile.ignore();
+            inputFile>>w1;
+            inputFile.ignore();
             Movie film; 
             film.setTitle(t1); 
             film.setYear(y1);
@@ -73,7 +78,9 @@ int main() {
 
     for(int i = 0; i < movies.size(); i++)
     {
-        movies[i].print();  
+        cout<<"Movie: "<<movies[i].getTitle()<<endl; 
+        cout<<"Year: " <<movies[i].getYear()<<endl; 
+        cout<<"Screenwriter: "<<movies[i].getWriter()<<endl;  
     }
 
 
