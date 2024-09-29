@@ -6,7 +6,6 @@
 #include<array>
 #include<fstream>
 #include<string>
-#include<iomanip>
 
 using namespace std; 
 
@@ -39,7 +38,6 @@ class Movie
 
 };
 
-
 int main() {
 
     vector<Movie> movies; 
@@ -50,8 +48,6 @@ int main() {
     string y1; 
     string w1;  
 
-    
-    
     if(inputFile.is_open()) 
     {
         
@@ -79,8 +75,8 @@ int main() {
     for(int i = 0; i < movies.size(); i++)
     {
         cout<<"Movie: "<<movies[i].getTitle()<<endl; 
-        cout<<"Year Released: " <<movies[i].getYear()<<endl; 
-        cout<<"Screenwriter: "<<movies[i].getWriter()<<endl<<endl;  
+        cout<<"\t"<<"Year Released: " <<movies[i].getYear()<<endl; 
+        cout<<"\t"<<"Screenwriter: "<<movies[i].getWriter()<<endl<<endl;  
     }
 
 
