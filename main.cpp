@@ -5,6 +5,8 @@
 #include<vector>
 #include<array>
 #include<fstream>
+#include<string>
+#include<iomanip>
 
 using namespace std; 
 
@@ -52,13 +54,11 @@ int main() {
     
     if(inputFile.is_open()) 
     {
-        while (inputFile>>t1) 
+        
+        while ( getline(inputFile, t1) ) 
         {
-            inputFile.ignore();
-            inputFile>>y1;
-            inputFile.ignore();
-            inputFile>>w1;
-            inputFile.ignore();
+            getline(inputFile, y1);
+            getline(inputFile, w1);
             Movie film; 
             film.setTitle(t1); 
             film.setYear(y1);
@@ -79,8 +79,8 @@ int main() {
     for(int i = 0; i < movies.size(); i++)
     {
         cout<<"Movie: "<<movies[i].getTitle()<<endl; 
-        cout<<"Year: " <<movies[i].getYear()<<endl; 
-        cout<<"Screenwriter: "<<movies[i].getWriter()<<endl;  
+        cout<<"Year Released: " <<movies[i].getYear()<<endl; 
+        cout<<"Screenwriter: "<<movies[i].getWriter()<<endl<<endl;  
     }
 
 
