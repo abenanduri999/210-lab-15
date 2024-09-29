@@ -61,10 +61,21 @@ int main() {
             movies.push_back(film); 
 
         }
+
+        inputFile.close(); 
+    }
+
+    else
+    {
+        cout<<"Error, file not found!"<<endl; 
+        return 1;
+    }
+
+    for(int i = 0; i < movies.size(); i++)
+    {
+        movies[i].print();  
     }
 
 
-
-
-
+return 0;
 }
