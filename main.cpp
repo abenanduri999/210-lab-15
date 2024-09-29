@@ -44,8 +44,25 @@ int main() {
 
     ifstream inputFile; 
     inputFile.open("input.txt"); 
+    string t1;
+    string y1; 
+    string w1;  
 
     
+    int count; 
+    if(inputFile.is_open()) 
+    {
+        while (inputFile>>count) 
+        {
+            Movie film; 
+            film.setTitle(t1); 
+            film.setYear(y1);
+            film.setWriter(w1); 
+            movies.push_back(film); 
+
+        }
+    }
+
 
 
 
