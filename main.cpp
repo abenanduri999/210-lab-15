@@ -37,3 +37,17 @@ class Movie
 
 };
 
+
+int main() {
+
+    vector<Movie> movies; 
+
+    ifstream inputFile; 
+    inputFile.open("input.txt"); 
+
+    
+
+
+
+
+}
